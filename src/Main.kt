@@ -3,7 +3,7 @@
 fun main() {
     val myTemp = Temperature(Temperature.Unit.K)
 
-    myTemp.setTemp(32.0)
+    myTemp.setTemp(0.0)
 
-    println("The temperature is ${myTemp.getTemp(Temperature.Unit.F)}")
+    println("The temperature is ${myTemp.getTemp()}")
 }
