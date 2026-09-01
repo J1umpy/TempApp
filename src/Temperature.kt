@@ -20,7 +20,6 @@ abstract class Temperature(
         setTemp(unit, temp)
     }
 
-
     protected fun getTemp (newUnit: Unit = unit) = when (newUnit) {
         Unit.C -> temp - 273.15
         Unit.F -> ((temp - 273.15) * (9.0 / 5.0)) + 32
@@ -37,7 +36,7 @@ class Kelvin(temp: Double) : Temperature(Unit.K, temp){
         return super.getTemp(Unit.K)
     }
     override fun getTempIn(unit: Unit): Double {
-        TODO("Not yet implemented")
+        return super.getTemp(unit)
     }
 }
 
@@ -46,7 +45,7 @@ class Celsius(temp: Double) : Temperature(Unit.C, temp){
         return super.getTemp(Unit.C)
     }
     override fun getTempIn(unit: Unit): Double {
-        TODO("Not yet implemented")
+        return super.getTemp(Unit.C)
     }
 }
 
@@ -55,6 +54,6 @@ class Fahrenheit(temp: Double) : Temperature(Unit.F, temp){
         return super.getTemp(Unit.F)
     }
     override fun getTempIn(unit: Unit): Double {
-        TODO("Not yet implemented")
+        return super.getTemp(Unit.C)
     }
 }
