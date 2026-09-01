@@ -1,7 +1,7 @@
-abstract class Temperature (
+abstract class Temperature(
     val unit: Unit,
     private var temp: Double = 0.0
-) {
+) : ITemperature {
 
     init {
         // Temp is stored as Kelvin
