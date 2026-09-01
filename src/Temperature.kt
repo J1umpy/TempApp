@@ -1,4 +1,4 @@
-class Temperature (
+abstract class Temperature (
     val unit: Unit,
     private var temp: Double = 0.0
 ) {
@@ -20,12 +20,14 @@ class Temperature (
         setTemp(unit, temp)
     }
 
-    fun getTemp (newUnit: Unit = unit) = when (newUnit) {
+
+    protected fun getTemp (newUnit: Unit = unit) = when (newUnit) {
         Unit.C -> temp - 273.15
         Unit.F -> ((temp - 273.15) * (9.0 / 5.0)) + 32
         else -> temp
     }
 
+    //delete this??
     enum class Unit {
         C, F, K
     }
