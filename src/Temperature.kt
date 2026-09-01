@@ -27,11 +27,34 @@ abstract class Temperature(
         else -> temp
     }
 
-    //delete this??
     enum class Unit {
         C, F, K
     }
 
 }
+class Kelvin(temp: Double) : Temperature(Unit.K, temp){
+    override fun getTemp(): Double {
+        return super.getTemp(Unit.K)
+    }
+    override fun getTempIn(unit: Unit): Double {
+        TODO("Not yet implemented")
+    }
+}
 
+class Celsius(temp: Double) : Temperature(Unit.C, temp){
+    override fun getTemp(): Double{
+        return super.getTemp(Unit.C)
+    }
+    override fun getTempIn(unit: Unit): Double {
+        TODO("Not yet implemented")
+    }
+}
 
+class Fahrenheit(temp: Double) : Temperature(Unit.F, temp){
+    override fun getTemp(): Double {
+        return super.getTemp(Unit.F)
+    }
+    override fun getTempIn(unit: Unit): Double {
+        TODO("Not yet implemented")
+    }
+}
